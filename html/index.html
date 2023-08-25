@@ -6,6 +6,76 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Forms -->
+    <form action="">
+      <fieldset>
+        <label for="nombres">Nombres</label>
+        <input type="text" id="nombres" name="nombres" />
+      </fieldset>
+      <fieldset>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" />
+      </fieldset>
+      <fieldset>
+        <h4>Favorite programming language!</h4>
+        <input type="radio" name="lenguaje" id="js" /><label for="js"
+          >Javascript</label
+        >
+        <input type="radio" name="lenguaje" id="python" checked /><label
+          for="python"
+          >Python</label
+        >
+        <input type="radio" name="lenguaje" id="java" /><label for="java"
+          >Java</label
+        >
+      </fieldset>
+      <fieldset>
+        <h4>Hobbies</h4>
+        <input type="checkbox" name="tv" id="tv" />
+        <label for="tv">TV</label>
+
+        <input type="checkbox" name="music" id="music" />
+        <label for="music">Music</label>
+
+        <input type="checkbox" name="running" id="running" checked />
+        <label for="running">Running</label>
+      </fieldset>
+
+      <fieldset>
+        <label for="city">City</label>
+        <select id="city" size="4" multiple>
+          <option value="bogota">Bogotá</option>
+          <option value="medellin">Medellín</option>
+          <option value="cali">Cali</option>
+          <option value="bucaramanga">Bucaramanga</option>
+          <option value="pereira">Pereira</option>
+          <option value="barranquilla">Barranquilla</option>
+          <option value="ibague">Ibagué</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <h4>Comments</h4>
+        <textarea cols="30" rows="10"></textarea>
+      </fieldset>
+      <fieldset>
+        <button type="submit">Enviar información</button>
+        <input type="submit" value="Ingresar" />
+      </fieldset>
+      <fieldset>
+        <input type="date" name="" id="" />
+        <input type="color" name="" id="" />
+        <input type="number" name="" id="" />
+        <input type="password" name="" id="" />
+        <input type="file" name="" id="" />
+        <input type="text" placeholder="Type your name" />
+        <input type="hidden" id="dato" />
+      </fieldset>
+    </form>
+
+    <button>No envía información</button>
+
+    <hr />
+
     <!-- Zona genérica -->
     <div>Este es un DIV</div>
 
