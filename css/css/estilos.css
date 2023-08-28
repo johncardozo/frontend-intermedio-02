@@ -1,17 +1,11 @@
-/* Selector por tag */
-h1 {
-  background-color: salmon;
+/* Todos los p que sean hijos div */
+div > p {
+  background-color: red;
   color: white;
 }
 
-/* Selector por identificador */
-#subtitulo {
-  background-color: orange;
-  color: red;
-}
-
-/* Selector por clase */
-.fecha {
-  background-color: blue;
+/* Todos los p descendientes de div */
+div p {
+  background-color: green;
   color: yellow;
 }
