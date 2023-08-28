@@ -1,4 +1,17 @@
+/* Selector por tag */
 h1 {
-  background-color: magenta;
+  background-color: salmon;
   color: white;
+}
+
+/* Selector por identificador */
+#subtitulo {
+  background-color: orange;
+  color: red;
+}
+
+/* Selector por clase */
+.fecha {
+  background-color: blue;
+  color: yellow;
 }
