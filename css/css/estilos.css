@@ -1,11 +1,34 @@
-/* Todos los p que sean hijos div */
-div > p {
-  background-color: red;
+a {
+  background-color: navy;
   color: white;
 }
 
-/* Todos los p descendientes de div */
-div p {
-  background-color: green;
-  color: yellow;
+a:hover {
+  background-color: orange;
+  color: red;
+}
+
+.city {
+  color: magenta;
+}
+
+.city:hover {
+  color: cyan;
+}
+
+#titulo:hover {
+  color: salmon;
+}
+
+#countries li:first-child {
+  color: magenta;
+}
+
+#countries li:last-child {
+  color: blue;
+}
+
+tbody tr:nth-child(2) {
+  background-color: red;
+  color: white;
 }
