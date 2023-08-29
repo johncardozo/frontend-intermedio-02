@@ -1,20 +1,55 @@
-h1 {
-  /* Color nombrado */
-  /* 140 colores */
-  color: orange;
-  background-color: blue;
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h2 {
-  /* Red, Green, Blue */
-  /* Cada valor: 0.. 255 */
-  /* 16M de colores */
-  color: rgb(255, 165, 0);
-  background-color: rgb(25, 0, 255);
+/* Borde: Ancho, color, estilo */
+#parrafo1 {
+  border-color: red;
+  border-width: 2px;
+  /* solid, dashed, dotted, double */
+  border-style: double;
+}
+#parrafo2 {
+  border: 2px orange solid;
+}
+#parrafo3 {
+  border-top-color: blue;
+  border-top-width: 2px;
+  border-top-style: solid;
+
+  border-right-color: green;
+  border-right-width: 5px;
+  border-right-style: dotted;
+
+  border-bottom-color: red;
+  border-bottom-width: 3px;
+  border-bottom-style: dashed;
+
+  border-left-color: orange;
+  border-left-width: 10px;
+  border-left-style: double;
 }
 
-h3 {
-  /* Hexagesimal */
-  color: #ffa500;
-  background-color: #1900ff;
+#parrafo4 {
+  border-top: 2px solid blue;
+  border-right: 5px dotted green;
+  border-bottom: 3px dashed red;
+  border-left: 10px double orange;
+}
+
+#parrafo5 {
+  background-color: magenta;
+  color: white;
+  border-radius: 10px;
+}
+
+#area {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
 }
