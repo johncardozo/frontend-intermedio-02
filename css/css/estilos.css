@@ -1,34 +1,10 @@
-a {
-  background-color: navy;
-  color: white;
-}
-
-a:hover {
-  background-color: orange;
+input[type="email"] {
   color: red;
 }
 
-.city {
-  color: magenta;
+a[data-destino="externo"] {
+  color: red;
 }
-
-.city:hover {
-  color: cyan;
-}
-
-#titulo:hover {
-  color: salmon;
-}
-
-#countries li:first-child {
-  color: magenta;
-}
-
-#countries li:last-child {
-  color: blue;
-}
-
-tbody tr:nth-child(2) {
-  background-color: red;
-  color: white;
+a[data-destino="interno"] {
+  color: green;
 }
