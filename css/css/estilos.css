@@ -5,51 +5,29 @@
   box-sizing: border-box;
 }
 
-/* Borde: Ancho, color, estilo */
+p {
+  background-color: salmon;
+}
+
 #parrafo1 {
-  border-color: red;
-  border-width: 2px;
-  /* solid, dashed, dotted, double */
-  border-style: double;
+  /* Márgenes independientes */
+  margin-top: 10px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
+
 #parrafo2 {
-  border: 2px orange solid;
+  /* Todas las márgenes */
+  margin: 10px;
 }
+
 #parrafo3 {
-  border-top-color: blue;
-  border-top-width: 2px;
-  border-top-style: solid;
-
-  border-right-color: green;
-  border-right-width: 5px;
-  border-right-style: dotted;
-
-  border-bottom-color: red;
-  border-bottom-width: 3px;
-  border-bottom-style: dashed;
-
-  border-left-color: orange;
-  border-left-width: 10px;
-  border-left-style: double;
+  /* top, right, bottom, left */
+  margin: 10px 20px 30px 30px;
 }
 
 #parrafo4 {
-  border-top: 2px solid blue;
-  border-right: 5px dotted green;
-  border-bottom: 3px dashed red;
-  border-left: 10px double orange;
-}
-
-#parrafo5 {
-  background-color: magenta;
-  color: white;
-  border-radius: 10px;
-}
-
-#area {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  color: white;
-  border-radius: 50%;
+  /* top/bottom, left,right */
+  margin: 10px 20px;
 }
