@@ -1,10 +1,20 @@
-input[type="email"] {
-  color: red;
+h1 {
+  /* Color nombrado */
+  /* 140 colores */
+  color: orange;
+  background-color: blue;
 }
 
-a[data-destino="externo"] {
-  color: red;
+h2 {
+  /* Red, Green, Blue */
+  /* Cada valor: 0.. 255 */
+  /* 16M de colores */
+  color: rgb(255, 165, 0);
+  background-color: rgb(25, 0, 255);
 }
-a[data-destino="interno"] {
-  color: green;
+
+h3 {
+  /* Hexagesimal */
+  color: #ffa500;
+  background-color: #1900ff;
 }
