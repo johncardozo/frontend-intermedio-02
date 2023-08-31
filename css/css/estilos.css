@@ -25,6 +25,12 @@ nav li:first-child i {
   margin-right: 20px;
 }
 
+nav li:first-child i:hover {
+  transform: rotate(-45deg);
+  color: pink;
+  border: 2px solid yellow;
+}
+
 nav a {
   color: #fff;
   font-family: Montserrat, sans-serif;
