@@ -5,24 +5,15 @@
   box-sizing: border-box;
 }
 
-h1,
-p {
-  font-family: Montserrat, sans-serif;
+ul {
+  margin-left: 30px;
+  /* none, square, circle */
+  /* list-style-type: none; */
+  list-style-image: url("./leaf.png");
 }
 
-.exito {
-  color: green;
-  background-color: #9eff9e;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
-}
-.error {
-  color: red;
-  background-color: #fcabab;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  text-align: center;
+ol {
+  margin-left: 30px;
+  /* upper-roman, lower-roman, lower-alpha, upper-alpha, lower-greek */
+  list-style-type: lower-greek;
 }
