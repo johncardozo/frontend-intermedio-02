@@ -5,47 +5,24 @@
   box-sizing: border-box;
 }
 
-#parrafo2 {
-  background-color: #b8ffaa;
-  color: #096401;
-
-  padding: 20px;
-  margin: 20px;
-  font-size: 1.5rem;
-  font-family: "Montserrat", sans-serif;
+h1,
+p {
+  font-family: Montserrat, sans-serif;
 }
 
-#parrafo1 {
-  background-color: #aaedff;
-  color: #014e64;
-  padding: 20px;
-  margin: 20px;
-
-  /* Precedencia de fuentes */
-  font-family: Georgia, "Times New Roman", Times, serif;
-
-  /* 
-  Medidas CSS:
-  px: pixeles
-  em: tamaño estandar del elemento padre
-  rem: tamaño estandar del dispositivo 
-  */
-  font-size: 1.5rem;
+.exito {
+  color: green;
+  background-color: #9eff9e;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
 }
-
-span {
-  font-family: Arial, sans-serif;
-  font-style: italic;
-}
-#span1 {
-  font-weight: 100;
-}
-#span2 {
-  font-weight: 300;
-}
-#span3 {
-  font-weight: 600;
-}
-#span4 {
-  font-weight: bold;
+.error {
+  color: red;
+  background-color: #fcabab;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
 }
