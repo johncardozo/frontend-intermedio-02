@@ -5,15 +5,37 @@
   box-sizing: border-box;
 }
 
-ul {
-  margin-left: 30px;
-  /* none, square, circle */
-  /* list-style-type: none; */
-  list-style-image: url("./leaf.png");
+nav {
+  background-color: navy;
 }
 
-ol {
-  margin-left: 30px;
-  /* upper-roman, lower-roman, lower-alpha, upper-alpha, lower-greek */
-  list-style-type: lower-greek;
+nav ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+nav li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav li:first-child i {
+  color: #f7f789;
+  font-size: 2.5rem;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  background-color: #32329e;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #86fbff;
 }
