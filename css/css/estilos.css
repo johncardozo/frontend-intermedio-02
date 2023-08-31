@@ -5,43 +5,50 @@
   box-sizing: border-box;
 }
 
-nav {
-  background-color: navy;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 20px;
-}
-
-nav li {
-  display: inline;
-  margin-left: 20px;
-}
-
-nav li:first-child i {
-  color: #f7f789;
-  font-size: 2.5rem;
-  margin-right: 20px;
-}
-
-nav li:first-child i:hover {
-  transform: rotate(-45deg);
-  color: pink;
-  border: 2px solid yellow;
-}
-
-nav a {
-  color: #fff;
+table {
+  margin: 20px;
   font-family: Montserrat, sans-serif;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 1.3rem;
-  background-color: #32329e;
-  border-radius: 5px;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #86fbff;
+table,
+td,
+th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 5px 15px;
+}
+
+th {
+  background-color: #000080;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Par */
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+/* Impar */
+tr:nth-child(odd) {
+  background-color: #ddfcff;
+}
+
+td:nth-child(2) {
+  text-align: center;
+}
+
+/* 
+tr:nth-child(3) {
+  background-color: #8eff8e;
+  color: green;
+} 
+*/
+
+tr:hover {
+  background-color: #8e94ff;
 }
