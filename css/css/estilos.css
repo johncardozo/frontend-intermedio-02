@@ -22,7 +22,6 @@
     "menu contenido aside"
     "footer footer footer";
   gap: var(--grid-gap);
-
   font-family: Montserrat, sans-serif;
 }
 header {
