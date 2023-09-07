@@ -1,0 +1,20 @@
+// Partial sin namespace
+@use "fonts";
+// Partial con namespace
+@use "variables" as v;
+
+p {
+  font-family: fonts.$main-font-family;
+}
+h1 {
+  color: v.$color;
+  background-color: v.$bg-color;
+  font-family: fonts.$main-font-family;
+}
+h2 {
+  color: v.$bg-color;
+  border: v.$borde-delgado;
+}
+h3 {
+  border: v.$borde-grueso;
+}
