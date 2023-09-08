@@ -1,0 +1,6 @@
+@use "variables" as v;
+
+// Recorre el map de colores
+@each $key, $val in v.$colors {
+  @debug $key, $val;
+}

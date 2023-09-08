@@ -6,33 +6,23 @@ $color: #fff;
 $borde-delgado: 1px solid $bg-color;
 $borde-grueso: 3px solid $bg-color;
 
-// MAP
-$error: red;
+// Paleta de colores
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #1a8754;
+$danger: #dc3545;
+$warning: #ffc008;
+$info: #11caf0;
+$white: #fff;
+$black: #000;
+
 $colors: (
-  "primary": blue,
-  "secondary": gray,
-  "error": $error,
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "warning": $warning,
+  "info": $info,
+  "white": $white,
+  "black": $black,
 );
-
-@debug $colors;
-// Obtiene el valor de un elemento del map
-@debug map-get($colors, "primary");
-
-// Verificar si el map contiene un elemento
-@debug map-has-key($colors, "info"); // false
-@debug map-has-key($colors, "secondary"); // true
-
-// Eliminar un elemento del map
-@debug map-remove($colors, "error");
-
-// Agregar un elemento al map
-@debug map-merge(
-  $colors,
-  (
-    "warning": orange,
-  )
-);
-
-.mi-texto {
-  color: map-get($colors, "primary");
-}
