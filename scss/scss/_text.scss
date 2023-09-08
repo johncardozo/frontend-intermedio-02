@@ -1,0 +1,29 @@
+@use "sass:math";
+
+// Tamaños de fuente
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.75;
+$font-size-lg: $font-size-base * 1.5;
+$font-size-xl: $font-size-base * 2;
+$font-size-xxl: $font-size-base * 3;
+
+// Bordes
+$border-radius-base: 20px;
+$border-radius-sm: math.div($border-radius-base, 2);
+
+.texto-sm {
+  font-size: $font-size-sm;
+  border-radius: $border-radius-sm;
+}
+.texto-lg {
+  font-size: $font-size-lg;
+}
+.texto-xl {
+  font-size: $font-size-xl;
+}
+
+// Debug
+@debug "This is a message";
+@debug math.div(10px, 3);
+@debug math.max(3px, 10px, 18px, 8px);
+@debug math.floor(3.1416);
