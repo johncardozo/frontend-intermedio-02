@@ -1,0 +1,18 @@
+// NESTING
+.card {
+  display: block;
+  padding: 20px;
+  box-shadow: 2px 2px 2px #6e6e6e;
+
+  .card-title {
+    color: green;
+  }
+
+  .card-body {
+    color: lime;
+  }
+
+  a {
+    color: cyan;
+  }
+}
