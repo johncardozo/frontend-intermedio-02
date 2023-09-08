@@ -14,6 +14,7 @@ $border-radius-sm: math.div($border-radius-base, 2);
 .texto-sm {
   font-size: $font-size-sm;
   border-radius: $border-radius-sm;
+  border: math.div($border-radius-base, 3) solid red;
 }
 .texto-lg {
   font-size: $font-size-lg;

@@ -5,3 +5,34 @@ $color: #fff;
 // Bordes
 $borde-delgado: 1px solid $bg-color;
 $borde-grueso: 3px solid $bg-color;
+
+// MAP
+$error: red;
+$colors: (
+  "primary": blue,
+  "secondary": gray,
+  "error": $error,
+);
+
+@debug $colors;
+// Obtiene el valor de un elemento del map
+@debug map-get($colors, "primary");
+
+// Verificar si el map contiene un elemento
+@debug map-has-key($colors, "info"); // false
+@debug map-has-key($colors, "secondary"); // true
+
+// Eliminar un elemento del map
+@debug map-remove($colors, "error");
+
+// Agregar un elemento al map
+@debug map-merge(
+  $colors,
+  (
+    "warning": orange,
+  )
+);
+
+.mi-texto {
+  color: map-get($colors, "primary");
+}
