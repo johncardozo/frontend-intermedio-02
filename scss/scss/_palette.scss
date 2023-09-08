@@ -2,5 +2,12 @@
 
 // Recorre el map de colores
 @each $key, $val in v.$colors {
-  @debug $key, $val;
+  // Texto
+  .text-#{$key} {
+    color: $val;
+  }
+  // Background
+  .bg-#{$key} {
+    background-color: $val;
+  }
 }
