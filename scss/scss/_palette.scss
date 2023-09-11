@@ -10,23 +10,26 @@
   .bg-#{$key} {
     background-color: $val;
   }
-  // Variaciones claras
-  @for $i from 1 through 9 {
-    .text-#{$key}-light-#{$i} {
-      color: mix(white, $val, $i * 10%);
-    }
-    .bg-#{$key}-light-#{$i} {
-      background-color: mix(white, $val, $i * 10%);
-    }
-  }
 
-  // Variaciones oscuras
-  @for $i from 1 through 9 {
-    .text-#{$key}-dark-#{$i} {
-      color: mix(black, $val, $i * 10%);
+  // Verifica que no se generen variaciones para el color negro o blanco
+  @if ($val != #fff and $val != #000) {
+    // Variaciones claras
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10%);
+      }
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10%);
+      }
     }
-    .bg-#{$key}-dark-#{$i} {
-      background-color: mix(black, $val, $i * 10%);
+    // Variaciones oscuras
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10%);
+      }
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10%);
+      }
     }
   }
 }
