@@ -12,14 +12,12 @@
 // <= -> Menor o igual que
 // == -> Igual
 // != -> Diferente
-
 // IF
 @if (5 > 10) {
   .testing-conditional {
     color: magenta;
   }
 }
-
 // IF/ELSE
 @if (5 != 5) {
   .testing-conditional-if {
@@ -44,8 +42,15 @@ $a: 3;
   }
 }
 // OR -> Al menos una es verdadera
-@if ($a >= 5 or $a <= 8) {
+@if ($a >= 5 or $a <= 9) {
   .test-5-8 {
     color: yellow;
+  }
+}
+
+$b: true;
+@if (not $b) {
+  .test-bool {
+    color: black;
   }
 }
