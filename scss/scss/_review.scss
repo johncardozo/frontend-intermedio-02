@@ -1,0 +1,47 @@
+@use "fonts" as f;
+
+.review {
+  display: grid;
+  grid-template: 1fr auto / 1fr;
+  border: 1px solid #d7d7d7;
+  margin: 10px;
+  box-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
+  &__header {
+    background-color: #cccccc;
+    padding: 20px;
+    h1 {
+      color: #434343;
+    }
+  }
+  &__body {
+    background-color: #fff;
+    padding: 20px;
+  }
+  &__description {
+    p {
+      font-size: 1.2rem;
+      color: #656565;
+      text-align: justify;
+    }
+  }
+  &__user {
+    font-family: f.$main-font-family;
+    color: #008cea;
+    text-align: right;
+    &:hover {
+      color: #575757;
+    }
+  }
+  &__more {
+    font-family: f.$main-font-family;
+    background-color: #878787;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    &:hover {
+      background-color: #5a5a5a;
+    }
+  }
+}
