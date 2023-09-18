@@ -26,8 +26,8 @@ for (contador = 0; contador < 5; contador++) {
 }
 
 // EJERCICIO: Imprimir números PARES desde un valor "inicio" hasta "fin"
-// Ej. inicio = 1, fin = 20
-// 2, 4, 6, 8, 10, 12, 14, 16, 18, 20
+// Ej. inicio = 1, fin = 10
+// 2, 4, 6, 8, 10
 
 // Ej. inicio= 12, fin = 19
 // 12, 14, 16, 18
