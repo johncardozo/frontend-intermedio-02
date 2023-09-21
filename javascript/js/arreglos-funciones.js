@@ -91,3 +91,17 @@ console.log(curva);
 // Ordenar un arreglo
 let ordenadas = curva.sort();
 console.log(ordenadas);
+
+const verificacion = (nota) => (nota < 3 ? nota + 0.2 : nota);
+function verificacion2(nota) {
+  if (nota < 3) {
+    return nota + 0.2;
+  } else {
+    return nota;
+  }
+}
+
+let grades = [2, 4, 4.1, 1.2, 2.5, 5, 0.5, 2.8];
+let curve = grades.map(verificacion2);
+console.log(grades);
+console.log(curve);

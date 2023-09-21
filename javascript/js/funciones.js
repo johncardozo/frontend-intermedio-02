@@ -65,3 +65,30 @@ mensajeTextoColor(
   `El area del triángulo es ${areaTriangulo(10, 2)}`,
   "GreenYellow"
 );
+
+function areaCirculo(radio) {
+  // Validación
+  if (radio < 0) return;
+  if (radio > 100) return;
+
+  const area = Math.PI * Math.pow(radio, 2);
+  return area;
+}
+
+// {} -> Definir bloques de código (p.e. for, while, if, function)
+// () -> Define los parámetros de una función
+// [] -> Hace referencia a una posición en un arreglo
+
+const e = existeValor([10, 20, 30, 40, 50, 60, 70], 30);
+console.log(e);
+
+function existeValor(arreglo, buscado) {
+  let i = 0;
+  while (i < arreglo.length) {
+    if (arreglo[i] === buscado) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+}
