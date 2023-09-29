@@ -97,7 +97,13 @@ console.table(collection);
 // Acceso a un atributo de un objeto en un arreglo
 console.log(collection[1].title);
 
-// Recorrer un arreglo de objetos
-collection.forEach((s) => {
-  console.log(`${s.title} fue grabada en ${s.year} por ${s.artist}`);
+// Recorrer un arreglo de objetos con forEach y función anónima
+collection.forEach((song) => {
+  console.log(`${song.title} fue grabada en ${song.year} por ${song.artist}`);
 });
+
+function printSong(song) {
+  console.log(`${song.title} was recorded in ${song.year} by ${song.artist}`);
+}
+// Recorrer un arreglo de objetos con forEach y función declarada
+collection.forEach(printSong);
