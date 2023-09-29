@@ -37,16 +37,20 @@ class Triangulo {
   constructor(base, altura) {
     this.#base = base;
     this.#altura = altura;
-    this.#area = (base * altura) / 2;
+    this.#calcularArea();
+  }
+  // Función privada
+  #calcularArea() {
+    this.#area = (this.#base * this.#altura) / 2;
   }
   // setters
   set altura(altura) {
     this.#altura = altura;
-    this.#area = (this.#base * this.#altura) / 2;
+    this.#calcularArea();
   }
   set base(base) {
     this.#base = base;
-    this.#area = (this.#base * this.#altura) / 2;
+    this.#calcularArea();
   }
   // getters
   get altura() {
@@ -69,3 +73,31 @@ triangulo1.base = 4;
 console.log(
   `Para un triángulo de base: ${triangulo1.base} y altura: ${triangulo1.altura}, su área será ${triangulo1.area}`
 );
+
+class Song {
+  constructor(artist, title, year) {
+    this.artist = artist;
+    this.title = title;
+    this.year = year;
+  }
+}
+
+// Creación de objetos
+const song1 = new Song("ACDC", "Back in Black", 1980);
+const song2 = new Song("Guns and Roses", "Welcome to the Jungle", 1991);
+const song3 = new Song("Metallica", "Whisky in the jar", 1998);
+
+// Agregar objetos a un arreglo
+let collection = [];
+collection.push(song1);
+collection.push(song2);
+collection.push(song3);
+
+console.table(collection);
+// Acceso a un atributo de un objeto en un arreglo
+console.log(collection[1].title);
+
+// Recorrer un arreglo de objetos
+collection.forEach((s) => {
+  console.log(`${s.title} fue grabada en ${s.year} por ${s.artist}`);
+});
