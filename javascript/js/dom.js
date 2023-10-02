@@ -27,8 +27,8 @@ for (let i = 0; i < paises.length; i++) {
     pais.style.backgroundColor = "navy";
   }
 
-  pais.addEventListener("click", function () {
-    const texto = this.textContent;
-    alert(texto);
+  pais.addEventListener("click", function (event) {
+    const elemento = event.target;
+    elemento.style.textDecoration = "line-through";
   });
 }
