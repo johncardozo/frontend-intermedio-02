@@ -5,8 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Typescript</title>
     <script src="dist/interfaces.js" defer></script>
+    <style>
+      table {
+        width: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 5px;
+      }
+    </style>
   </head>
   <body>
     <h1>Typescript</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Distance</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
   </body>
 </html>
