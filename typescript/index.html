@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Typescript</title>
-    <script src="dist/interfaces.js" defer></script>
+    <title>Training Manager</title>
+    <script src="dist/dom.js" defer></script>
     <style>
       table {
         width: 100%;
@@ -20,10 +20,30 @@
       td {
         padding: 5px;
       }
+      fieldset {
+        border: none;
+      }
     </style>
   </head>
   <body>
-    <h1>Typescript</h1>
+    <h1>Training Manager</h1>
+    <form id="form">
+      <fieldset>
+        <label>Type</label>
+        <select id="type">
+          <option value="1">Long Run</option>
+          <option value="2">Intervals</option>
+          <option value="3">Running</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label>Distance</label>
+        <input type="number" id="distance" />
+      </fieldset>
+      <fieldset>
+        <button>Add</button>
+      </fieldset>
+    </form>
     <table>
       <thead>
         <tr>
@@ -33,5 +53,6 @@
       </thead>
       <tbody id="tbody"></tbody>
     </table>
+    <ul id="lista"></ul>
   </body>
 </html>

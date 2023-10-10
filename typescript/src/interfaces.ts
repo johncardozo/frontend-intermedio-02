@@ -1,10 +1,10 @@
-interface ITraining {
+interface ITraining2 {
   type: string;
   distance: number;
   format(): string;
 }
 
-class LongRunTraining implements ITraining {
+class LongRunTraining2 implements ITraining {
   readonly type: string;
   constructor(public distance: number) {
     this.type = "LONG RUN";
@@ -13,7 +13,7 @@ class LongRunTraining implements ITraining {
     return `${this.type} for ${this.distance}Kms`;
   }
 }
-class IntervalsTraining implements ITraining {
+class IntervalsTraining2 implements ITraining {
   readonly type: string;
   constructor(public distance: number, public amount: number) {
     this.type = "INTERVALS";
@@ -22,7 +22,7 @@ class IntervalsTraining implements ITraining {
     return `${this.amount} ${this.type} for ${this.distance}kms`;
   }
 }
-class RunningTraining implements ITraining {
+class RunningTraining2 implements ITraining {
   readonly type: string;
   constructor(public distance: number, public date: string) {
     this.type = "RUNNING";
@@ -33,16 +33,16 @@ class RunningTraining implements ITraining {
 }
 
 // Instanciación de clases a partir de una interface
-const entrenamiento1: ITraining = new LongRunTraining(42);
-const entrenamiento2: ITraining = new IntervalsTraining(8, 5);
-const entrenamiento3: ITraining = new RunningTraining(15, "2023-10-09");
-const entrenamiento4: ITraining = new LongRunTraining(55);
+const entrenamiento1: ITraining2 = new LongRunTraining2(42);
+const entrenamiento2: ITraining2 = new IntervalsTraining2(8, 5);
+const entrenamiento3: ITraining2 = new RunningTraining2(15, "2023-10-09");
+const entrenamiento4: ITraining2 = new LongRunTraining2(55);
 console.log(entrenamiento1);
 console.log(entrenamiento2);
 console.log(entrenamiento3);
 
 // Lista de objetos que cumplen con la interface
-const entrenamientos: ITraining[] = [
+const entrenamientos: ITraining2[] = [
   entrenamiento1,
   entrenamiento2,
   entrenamiento3,
@@ -53,7 +53,7 @@ entrenamientos.forEach((e) => {
 });
 
 // Obtiene una referencia al elemento
-const tbody = document.querySelector("#tbody")!;
+const tbody2 = document.querySelector("#tbody")!;
 // Recorre la lista de entrenamientos para generar la tabla HTML
 entrenamientos.forEach((entrenamiento) => {
   // Crea la fila
@@ -67,5 +67,5 @@ entrenamientos.forEach((entrenamiento) => {
   // Agrega las celdas a la fila
   tr.append(tdType, tdDistance);
   // Agrega la fila a la tabla
-  tbody.append(tr);
+  tbody2.append(tr);
 });
