@@ -2,10 +2,13 @@
 import "./App.css";
 
 function App() {
+  const nombre = "Catalina";
+  const edad = 15;
+
   return (
     <>
-      <h1>Tareas</h1>
-      <p>Estas son las tareas</p>
+      <p>El nombre de la estudiante es {nombre}</p>
+      <p>{edad > 18 ? "Adulto" : "Niño"}</p>
     </>
   );
 }
