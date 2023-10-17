@@ -1,14 +1,10 @@
-// Importa el CSS
 import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-  const nombre = "Catalina";
-  const edad = 15;
-
   return (
     <>
-      <p>El nombre de la estudiante es {nombre}</p>
-      <p>{edad > 18 ? "Adulto" : "Niño"}</p>
+      <Header />
     </>
   );
 }
