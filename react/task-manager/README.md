@@ -1,8 +1,11 @@
-# React + Vite
+# Task manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an example of how to develop an application usign React
 
-Currently, two official plugins are available:
+## Install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    npm i
+
+## Run
+
+    npm run dev
