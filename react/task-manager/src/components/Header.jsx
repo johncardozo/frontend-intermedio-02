@@ -1,10 +1,11 @@
 import Logo from "./Logo";
+import Title from "./Title";
 
 const Header = () => {
   return (
     <header>
       <Logo />
-      <h1>Task Manager</h1>
+      <Title text="Task Manager" small="A great application" />
     </header>
   );
 };
