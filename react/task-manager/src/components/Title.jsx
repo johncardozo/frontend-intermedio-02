@@ -1,9 +1,10 @@
-/* eslint-disable react/prop-types */
-const Title = (props) => {
+import PropTypes from "prop-types";
+
+const Title = ({ text, small }) => {
   return (
     <>
-      <h1>{props.text}</h1>
-      <h3>{props.small}</h3>
+      <h1>{text}</h1>
+      <h3>{small}</h3>
     </>
   );
 };
@@ -12,6 +13,13 @@ const Title = (props) => {
 Title.defaultProps = {
   text: "Admin Tareas",
   small: "App",
+};
+
+// Define tipos de parámetros
+Title.propTypes = {
+  //text: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  small: PropTypes.string,
 };
 
 export default Title;
