@@ -6,12 +6,21 @@ const tasks = [
 ];
 
 const TaskList = () => {
+  const username = "Catalina";
   return (
-    <ul>
-      {tasks.map((task) => (
-        <li key={task.id}>{task.text}</li>
-      ))}
-    </ul>
+    <>
+      <p>Welcome, {username || "guest"}</p>
+      {tasks.length < 0 ? (
+        <h1>No tasks</h1>
+      ) : (
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>{task.text}</li>
+          ))}
+        </ul>
+      )}
+      {tasks.length > 0 && <p>Lenght: {tasks.length}</p>}
+    </>
   );
 };
 
