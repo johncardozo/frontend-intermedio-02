@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 
 const Title = ({ text, small }) => {
+  // Estilos en un objeto
+  const subHeadingStyles = {
+    color: small.length > 3 ? "white" : "yellow",
+    textDecoration: "underline",
+  };
+
   return (
     <>
-      <h1>{text}</h1>
-      <h3>{small}</h3>
+      <h1 style={{ color: "white", backgroundColor: "red" }}>{text}</h1>
+      <h3 style={subHeadingStyles}>{small}</h3>
     </>
   );
 };
