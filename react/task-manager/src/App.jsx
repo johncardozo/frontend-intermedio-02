@@ -4,7 +4,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
 
-import "./App.css";
+import "./styles/App.scss";
 
 function App() {
   const [tasks, setTasks] = useState([

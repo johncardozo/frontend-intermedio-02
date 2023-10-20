@@ -4,12 +4,18 @@
   margin: 20px;
   gap: 5px;
   &__label {
-    color: navy;
+    color: #2e2e2e;
   }
   &__input {
-    color: magenta;
+    color: #2e2e2e;
+    padding: 5px;
   }
   &__button {
-    color: orange;
+    border: none;
+    background: #494699;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
   }
 }

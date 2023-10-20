@@ -1,17 +1,13 @@
 import PropTypes from "prop-types";
 
-const Title = ({ text, small }) => {
-  // Estilos en un objeto
-  const subHeadingStyles = {
-    color: small.length > 3 ? "white" : "yellow",
-    textDecoration: "underline",
-  };
+import "../styles/Title.scss";
 
+const Title = ({ text, small }) => {
   return (
-    <>
-      <h1 style={{ color: "white", backgroundColor: "red" }}>{text}</h1>
-      <h3 style={subHeadingStyles}>{small}</h3>
-    </>
+    <div className="title">
+      <h2>{text}</h2>
+      <h5>{small}</h5>
+    </div>
   );
 };
 
