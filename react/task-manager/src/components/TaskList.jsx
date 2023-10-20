@@ -1,25 +1,27 @@
-const tasks = [
-  { id: "1", text: "Running" },
-  { id: "2", text: "Cooking" },
-  { id: "3", text: "Drawing" },
-  { id: "4", text: "Swimming" },
-];
+import { useState } from "react";
 
 const TaskList = () => {
-  const username = "Catalina";
+  // INMUTABLE
+  // tasks = variable que contiene el estado
+  // setTasks = función que permite modificar el estado
+  const [tasks, setTasks] = useState([
+    { id: "1", text: "Running" },
+    { id: "2", text: "Cooking" },
+    { id: "3", text: "Drawing" },
+    { id: "4", text: "Swimming" },
+  ]);
+
   return (
     <>
-      <p>Welcome, {username || "guest"}</p>
-      {tasks.length < 0 ? (
-        <h1>No tasks</h1>
+      {tasks.length === 0 ? (
+        <h3>No tasks</h3>
       ) : (
-        <ul>
+        <>
           {tasks.map((task) => (
-            <li key={task.id}>{task.text}</li>
+            <h4 key={task.id}>{task.text}</h4>
           ))}
-        </ul>
+        </>
       )}
-      {tasks.length > 0 && <p>Lenght: {tasks.length}</p>}
     </>
   );
 };
