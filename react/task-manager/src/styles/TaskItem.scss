@@ -2,12 +2,20 @@
   background-color: #c6b8ff;
   padding: 10px 15px;
   border-radius: 5px;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   h3 {
     color: #2c293a;
     font-weight: 500;
   }
   &:hover {
-    background-color: #b9a7fe;
+    background-color: #c1b3fd;
+  }
+
+  .delete {
+    color: #d835d5;
+    cursor: pointer;
   }
 }
