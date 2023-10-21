@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <Logo />
-      <Title text="Task manager" small="my task application" />
+      <Title text="Task manager" small="The best task app ever!" />
     </header>
   );
 };

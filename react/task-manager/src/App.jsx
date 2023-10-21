@@ -14,11 +14,21 @@ function App() {
     { id: "4", text: "Swimming" },
   ]);
 
+  const onDeleteHandler = (id) => {
+    if (confirm("Are you sure you want to delete the task?")) {
+      // Elimina el elemento filtrando el arreglo por el id de cada tarea
+      // No se puede modificar la variable tasks porque es INMUTABLE
+      const resultado = tasks.filter((tarea) => tarea.id !== id);
+      // Modifica el estado
+      setTasks(resultado);
+    }
+  };
+
   return (
     <div className="app">
       <Header />
       <AddTaskForm />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} onDelete={onDeleteHandler} />
     </div>
   );
 }
