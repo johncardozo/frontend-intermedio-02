@@ -12,6 +12,7 @@ function App() {
     { id: "2", text: "Cooking" },
     { id: "3", text: "Drawing" },
     { id: "4", text: "Swimming" },
+    { id: "5", text: "Programming" },
   ]);
 
   const onDeleteHandler = (id) => {
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
+      <Header count={tasks.length} />
       <AddTaskForm />
       <TaskList tasks={tasks} onDelete={onDeleteHandler} />
     </div>
