@@ -3,12 +3,15 @@
   flex-direction: column;
   margin: 20px;
   gap: 5px;
+
   &__label {
     color: #2e2e2e;
   }
   &__input {
     color: #2e2e2e;
     padding: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
   }
   &__button {
     border: none;

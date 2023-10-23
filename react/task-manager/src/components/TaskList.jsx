@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import TaskItem from "./TaskItem";
 import "../styles/TaskList.scss";
 
-const TaskList = ({ tasks, onDelete }) => {
+const TaskList = ({ tasks, onDeleteTask }) => {
   return (
     <>
       {tasks.length === 0 ? (
@@ -11,7 +11,7 @@ const TaskList = ({ tasks, onDelete }) => {
       ) : (
         <div className="tasks">
           {tasks.map((task) => (
-            <TaskItem key={task.id} task={task} onDelete={onDelete} />
+            <TaskItem key={task.id} task={task} onDelete={onDeleteTask} />
           ))}
         </div>
       )}
@@ -21,7 +21,7 @@ const TaskList = ({ tasks, onDelete }) => {
 
 TaskList.propTypes = {
   tasks: PropTypes.array,
-  onDelete: PropTypes.func,
+  onDeleteTask: PropTypes.func,
 };
 
 export default TaskList;
