@@ -1,0 +1,8 @@
+{
+  "tasks": [
+    { "id": "1", "text": "Run a marathon" },
+    { "id": "2", "text": "Watch Pulp Fiction" },
+    { "id": "3", "text": "Cook the dinner" },
+    { "id": "4", "text": "Learn React" }
+  ]
+}
