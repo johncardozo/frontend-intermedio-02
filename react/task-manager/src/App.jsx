@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 import AddTaskForm from "./components/AddTaskForm";
 import Header from "./components/Header";
@@ -8,6 +9,27 @@ import "./styles/App.scss";
 
 function App() {
   const [tasks, setTasks] = useState([]);
+
+  // useEffect se ejecuta una sola vez cuando se monta el componente
+  useEffect(() => {
+    const getTasks = async () => {
+      try {
+        // Hace la petición al backend
+        const result = await axios.get("http://localhost:3000/tasks");
+
+        // Verifica el éxito de la petición
+        if (result.status === 200) {
+          // Modifica el estado
+          setTasks(result.data);
+        }
+      } catch (error) {
+        console.error("No hubo conexión al backend");
+      }
+    };
+
+    // Invoca la función para comunicarse con el backend
+    getTasks();
+  }, []);
 
   const onDeleteHandler = (id) => {
     if (confirm("Are you sure you want to delete the task?")) {
