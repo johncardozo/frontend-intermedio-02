@@ -1,0 +1,24 @@
+### Obtiene todas las tareas
+GET http://localhost:3000/tasks
+
+### Obtiene una tarea
+GET http://localhost:3000/tasks/2
+
+### Crear tarea
+POST http://localhost:3000/tasks
+content-type: application/json
+
+{
+    "text": "Learn backend"
+}
+
+### Modificar tarea
+PATCH http://localhost:3000/tasks/3
+content-type: application/json
+
+{
+    "text": "Cook a cake"
+}
+
+### Eliminar una tarea
+DELETE http://localhost:3000/tasks/asdj7aha
