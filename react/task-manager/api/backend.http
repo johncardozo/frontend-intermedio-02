@@ -2,7 +2,7 @@
 GET http://localhost:3000/tasks
 
 ### Obtiene una tarea
-GET http://localhost:3000/tasks/2
+GET http://localhost:3000/tasks/OR2Bnas
 
 ### Crear tarea
 POST http://localhost:3000/tasks

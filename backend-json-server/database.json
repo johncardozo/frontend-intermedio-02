@@ -1,36 +1,16 @@
 {
   "tasks": [
     {
-      "id": "1612573",
-      "text": "Run a marathon"
-    },
-    {
-      "id": "34867baj",
-      "text": "Cook a cake"
-    },
-    {
-      "id": "weuyrwjb",
-      "text": "Learn React"
-    },
-    {
       "text": "Learn backend",
       "id": "qjvojok"
-    },
-    {
-      "text": "Develop a program",
-      "id": "OR2Bnas"
     },
     {
       "text": "Learn Scrum",
       "id": "N3mS6Ku"
     },
     {
-      "text": "Watch TV",
-      "id": "zmhoK83"
-    },
-    {
-      "text": "Train for next run",
-      "id": "n_3AVCE"
+      "text": "Run a marathon",
+      "id": "0Wlzlc7"
     }
   ]
 }
