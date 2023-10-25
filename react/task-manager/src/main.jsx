@@ -6,7 +6,8 @@ import "./main.css";
 const root = document.getElementById("root");
 
 createRoot(root).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>
 );

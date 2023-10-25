@@ -1,10 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import "../styles/Form.scss";
 
 const AddTaskForm = ({ onCreateTask }) => {
   const [text, setText] = useState("");
+
+  // Ejecutado cada vez que se actualiza el componente
+  useEffect(() => {
+    console.log("Re-rendered");
+  });
+
+  // Ejecutado SOLO al crear/montar el componente
+  useEffect(() => {
+    console.log("Componente creado");
+  }, []);
+
+  // Ejecuta al crear/montar el componente y cuando cambia
+  // el valor de la dependencia
+  useEffect(() => {
+    console.log("Cambió el texto");
+  }, [text]);
 
   const handleSubmit = (event) => {
     // Previene que se envíe información al servidor refrescando la página
