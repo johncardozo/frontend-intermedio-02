@@ -41,14 +41,15 @@ function App() {
     }
   };
 
-  const onCreateHandler = (text) => {
+  const onCreateHandler = async (text) => {
     // Crea un objeto para la nueva tarea
     const newTask = {
-      id: crypto.randomUUID(),
       text,
     };
+    // Crea la tarea en el backend
+    const result = await axios.post("http://localhost:3000/tasks", newTask);
     // Crea un nuevo arreglo basado en los elementos del arreglo tasks agregando la nueva al nueva tarea al final
-    const newTasks = [...tasks, newTask];
+    const newTasks = [...tasks, result.data];
     // Modifica el estado
     setTasks(newTasks);
   };

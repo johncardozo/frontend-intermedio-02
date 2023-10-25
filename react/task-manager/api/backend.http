@@ -9,7 +9,7 @@ POST http://localhost:3000/tasks
 content-type: application/json
 
 {
-    "text": "Learn backend"
+    "text": "Learn Scrum"
 }
 
 ### Modificar tarea
