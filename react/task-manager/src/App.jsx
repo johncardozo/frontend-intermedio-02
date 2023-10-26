@@ -4,6 +4,7 @@ import axios from "axios";
 import AddTaskForm from "./components/AddTaskForm";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
+import LocalizationContext from "./context/LocalizationContext";
 
 import "./styles/App.scss";
 
@@ -76,12 +77,25 @@ function App() {
     }
   };
 
+  const local = {
+    es: {
+      title: "Administrador de Tareas",
+      count: "Cantidad",
+    },
+    en: {
+      title: "Task Manager",
+      count: "Count",
+    },
+  };
+
   return (
-    <div className="app">
-      <Header count={tasks.length} />
-      <AddTaskForm onCreateTask={onCreateHandler} />
-      <TaskList tasks={tasks} onDeleteTask={onDeleteHandler} />
-    </div>
+    <LocalizationContext.Provider value={local.en}>
+      <div className="app">
+        <Header count={tasks.length} />
+        <AddTaskForm onCreateTask={onCreateHandler} />
+        <TaskList tasks={tasks} onDeleteTask={onDeleteHandler} />
+      </div>
+    </LocalizationContext.Provider>
   );
 }
 
