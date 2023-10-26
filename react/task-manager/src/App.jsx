@@ -4,12 +4,26 @@ import axios from "axios";
 import AddTaskForm from "./components/AddTaskForm";
 import Header from "./components/Header";
 import TaskList from "./components/TaskList";
+import SelectLanguage from "./components/SelectLanguage";
+
 import LocalizationContext from "./context/LocalizationContext";
 
 import "./styles/App.scss";
 
+const local = {
+  es: {
+    title: "Administrador de Tareas",
+    count: "Cantidad",
+  },
+  en: {
+    title: "Task Manager",
+    count: "Count",
+  },
+};
+
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [language, setLanguage] = useState(local.es);
 
   // useEffect se ejecuta una sola vez cuando se monta el componente
   useEffect(() => {
@@ -77,21 +91,16 @@ function App() {
     }
   };
 
-  const local = {
-    es: {
-      title: "Administrador de Tareas",
-      count: "Cantidad",
-    },
-    en: {
-      title: "Task Manager",
-      count: "Count",
-    },
+  const handlerLanguageChange = (lang) => {
+    // cambia el estdo dependiendo del idioma seleccionado
+    setLanguage(local[lang]);
   };
 
   return (
-    <LocalizationContext.Provider value={local.en}>
+    <LocalizationContext.Provider value={language}>
       <div className="app">
         <Header count={tasks.length} />
+        <SelectLanguage onChangeLanguage={handlerLanguageChange} />
         <AddTaskForm onCreateTask={onCreateHandler} />
         <TaskList tasks={tasks} onDeleteTask={onDeleteHandler} />
       </div>

@@ -1,0 +1,10 @@
+.languages {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+
+  span {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
