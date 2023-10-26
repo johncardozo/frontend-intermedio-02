@@ -7,6 +7,7 @@ const SelectLanguage = ({ onChangeLanguage }) => {
     <div className="languages">
       <span onClick={() => onChangeLanguage("es")}>🇪🇸</span>
       <span onClick={() => onChangeLanguage("en")}>🇬🇧</span>
+      <span onClick={() => onChangeLanguage("fr")}>🇫🇷</span>
     </div>
   );
 };
