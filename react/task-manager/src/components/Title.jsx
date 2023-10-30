@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { useContext } from "react";
 
 import LocalizationContext from "../context/LocalizationContext";
+
 import "../styles/Title.scss";
 
 const Title = ({ count }) => {

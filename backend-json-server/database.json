@@ -1,16 +1,12 @@
 {
   "tasks": [
     {
-      "text": "Learn backend",
-      "id": "qjvojok"
-    },
-    {
-      "text": "Learn Scrum",
-      "id": "N3mS6Ku"
-    },
-    {
       "text": "Run a 21k",
       "id": "3xkmjAc"
+    },
+    {
+      "text": "Learn React",
+      "id": "yor11AW"
     }
   ]
 }

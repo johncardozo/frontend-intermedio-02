@@ -11,9 +11,9 @@ const SelectLanguage = () => {
 
   return (
     <div className="languages">
-      <span onClick={() => setLanguage(local["es"])}>🇪🇸</span>
-      <span onClick={() => setLanguage(local["en"])}>🇬🇧</span>
-      <span onClick={() => setLanguage(local["fr"])}>🇫🇷</span>
+      <span onClick={() => setLanguage(local.es)}>🇪🇸</span>
+      <span onClick={() => setLanguage(local.en)}>🇬🇧</span>
+      <span onClick={() => setLanguage(local.fr)}>🇫🇷</span>
     </div>
   );
 };
