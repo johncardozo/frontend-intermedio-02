@@ -1,0 +1,33 @@
+@use "../variables" as v;
+
+header {
+  background-color: v.$header-bg-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  h1 {
+    color: v.$header-color;
+    font-family: v.$font-family;
+    font-weight: 500;
+  }
+  .amount-container {
+    .cart-icon {
+      font-size: 2rem;
+      path {
+        stroke: v.$header-color;
+      }
+    }
+    .badge {
+      background-color: v.$badge-bg-color;
+      color: v.$header-color;
+      font-family: v.$font-family;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px;
+      border-radius: 10px;
+    }
+  }
+}
