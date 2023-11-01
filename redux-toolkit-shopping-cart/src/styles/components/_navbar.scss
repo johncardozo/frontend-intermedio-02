@@ -1,0 +1,16 @@
+@use "../variables" as v;
+@use "cart-icon" as ci;
+
+header {
+  background-color: v.$header-bg-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  h1 {
+    color: v.$header-color;
+    font-family: v.$font-family;
+    font-weight: 500;
+  }
+  @include ci.cart-icon();
+}
