@@ -1,0 +1,57 @@
+@use "../variables" as v;
+
+@mixin cart-item() {
+  .cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 1rem;
+    margin: 1.5rem 2rem;
+    align-items: center;
+
+    img {
+      height: 6rem;
+    }
+    h4 {
+      font-family: v.$font-family;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: v.$item-title-color;
+    }
+    h5 {
+      font-family: v.$font-family;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: v.$price-color;
+    }
+    &__remove-btn {
+      background: transparent;
+      border: none;
+      font-family: v.$font-family;
+      color: v.$badge-bg-color;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: 500;
+      }
+    }
+    &__amount-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      svg {
+        color: v.$item-title-color;
+        &:hover {
+          color: v.$badge-bg-color;
+        }
+      }
+    }
+    &__amount-btn-text {
+      font-family: v.$font-family;
+      text-align: center;
+      font-size: 1.2rem;
+      color: v.$header-bg-color;
+    }
+  }
+}

@@ -24,8 +24,8 @@ const initialState = {
       amount: 1,
     },
   ],
-  amount: 0,
-  total: 0,
+  amount: 3,
+  total: 60,
 };
 
 // Crea un nuevo slice (característica)

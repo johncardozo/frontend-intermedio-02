@@ -1,0 +1,23 @@
+@use "../variables" as v;
+@use "cart-item" as ci;
+@use "cart-footer" as cf;
+
+.cart-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    background-color: v.$header-cart-bg-color;
+    padding: 0.6rem 2rem;
+    h2 {
+      font-family: v.$font-family;
+      color: v.$header-color;
+      font-weight: 500;
+    }
+  }
+
+  @include ci.cart-item();
+  @include cf.cart-footer();
+}

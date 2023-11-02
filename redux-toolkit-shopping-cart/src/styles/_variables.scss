@@ -2,6 +2,11 @@
 $font-family: "Montserrat", sans-serif;
 
 // Colores
-$header-bg-color: #16559d;
+$header-bg-color: #16489d;
 $header-color: #fff;
 $badge-bg-color: #900303;
+$header-cart-bg-color: mix(#fff, $header-bg-color, 30%);
+$price-color: #808080;
+$item-title-color: #414141;
+$clear-btn-border-color: #fd3ffd;
+$clear-btn-bg-color: #ffe7ff;

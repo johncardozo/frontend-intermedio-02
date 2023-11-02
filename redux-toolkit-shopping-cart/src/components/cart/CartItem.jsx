@@ -1,17 +1,25 @@
 import PropTypes from "prop-types";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const CartItem = ({ id, title, price, img, amount }) => {
   return (
-    <>
-      <ul>
-        <li>{id}</li>
-        <li>{title}</li>
-        <li>{price}</li>
-        <li>{img}</li>
-        <li>{amount}</li>
-      </ul>
-      <hr />
-    </>
+    <article key={id} className="cart-item">
+      <img src={img} alt={title} />
+      <div>
+        <h4>{title}</h4>
+        <h5>${price}</h5>
+        <button className="cart-item__remove-btn">remove</button>
+      </div>
+      <div>
+        <button className="cart-item__amount-btn">
+          <FaChevronUp />
+        </button>
+        <p className="cart-item__amount-btn-text">{amount}</p>
+        <button className="cart-item__amount-btn">
+          <FaChevronDown />
+        </button>
+      </div>
+    </article>
   );
 };
 

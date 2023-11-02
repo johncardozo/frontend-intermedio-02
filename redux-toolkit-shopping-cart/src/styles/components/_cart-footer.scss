@@ -1,0 +1,34 @@
+@use "../variables" as v;
+
+@mixin cart-footer() {
+  .cart-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    &__total {
+      padding: 1rem 0;
+      h4 {
+        font-family: v.$font-family;
+        text-align: right;
+        color: v.$price-color;
+        font-weight: 600;
+        span {
+          font-size: 1.5rem;
+          margin-left: 1rem;
+          color: v.$item-title-color;
+        }
+      }
+    }
+    &__btn-clear {
+      border: 1px solid v.$clear-btn-border-color;
+      background-color: v.$clear-btn-bg-color;
+      font-family: v.$font-family;
+      font-size: 1.2rem;
+      color: v.$clear-btn-border-color;
+      padding: 0.7rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
