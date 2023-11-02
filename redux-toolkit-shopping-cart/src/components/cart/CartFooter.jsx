@@ -1,6 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { clearCart } from "../../features/cart/cartSlice";
 
 const CartFooter = () => {
+  // Objecto que invoca el action en el reducer
+  const dispatch = useDispatch();
   // Obtiene acceso a la variable 'total' definida en el store
   const { total } = useSelector((store) => store.cart);
   return (
@@ -11,7 +14,12 @@ const CartFooter = () => {
           Total <span>${total}</span>
         </h4>
       </div>
-      <button className="cart-footer__btn-clear">Clear cart</button>
+      <button
+        className="cart-footer__btn-clear"
+        onClick={() => dispatch(clearCart())}
+      >
+        Clear cart
+      </button>
     </footer>
   );
 };
