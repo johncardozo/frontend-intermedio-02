@@ -3,8 +3,8 @@ import cartItems from "../../data/cartData";
 
 const initialState = {
   cartItems,
-  amount: 3,
-  total: 60,
+  amount: 0,
+  total: 0,
 };
 
 // Crea un nuevo slice (característica)
@@ -37,10 +37,27 @@ const cartSlice = createSlice({
       // Decrementa la cantidad del item
       cartItem.amount--;
     },
+    calculateTotals: (state) => {
+      let amount = 0;
+      let total = 0;
+      // Recorre los items para calcular el amount y total del carrito
+      state.cartItems.forEach((item) => {
+        amount += item.amount;
+        total += item.amount * item.price;
+      });
+      // Modifica el estado
+      state.amount = amount;
+      state.total = total;
+    },
   },
 });
 
-export const { clearCart, removeItem, increaseItemAmount, decreaseItemAmount } =
-  cartSlice.actions;
+export const {
+  clearCart,
+  removeItem,
+  increaseItemAmount,
+  decreaseItemAmount,
+  calculateTotals,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
