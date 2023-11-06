@@ -16,9 +16,16 @@ const cartSlice = createSlice({
       // Elimina todos los elementos del cart
       state.cartItems = [];
     },
+    removeItem: (state, action) => {
+      // Obtiene el id del item
+      const itemId = action.payload;
+
+      // Elimina el item dado su id
+      state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
+    },
   },
 });
 
-export const { clearCart } = cartSlice.actions;
+export const { clearCart, removeItem } = cartSlice.actions;
 
 export default cartSlice.reducer;
