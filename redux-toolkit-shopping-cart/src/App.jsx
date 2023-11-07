@@ -1,8 +1,13 @@
-import { useSelector, useDispatch } from "react-redux";
-import CartContainer from "./components/cart/CartContainer";
-import NavBar from "./components/navbar/NavBar";
 import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+
+// Store
 import { calculateTotals } from "./features/cart/cartSlice";
+
+// Componentes
+import CartContainer from "./components/cart/CartContainer";
+import Modal from "./components/Modal";
+import NavBar from "./components/navbar/NavBar";
 
 const App = () => {
   // Obtiene los datos del store
@@ -16,6 +21,7 @@ const App = () => {
 
   return (
     <>
+      <Modal />
       <NavBar />
       <CartContainer />
     </>

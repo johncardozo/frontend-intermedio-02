@@ -10,3 +10,11 @@ $price-color: #808080;
 $item-title-color: #414141;
 $clear-btn-border-color: #fd3ffd;
 $clear-btn-bg-color: #ffe7ff;
+
+// Modal
+$modal-backdrop: rgba(0, 0, 0, 0.8);
+$modal-bg: #fff;
+$modal-btn-confirm-color: #fd3ffd;
+$modal-btn-confirm-bg: mix(#fd3ffd, #fff, 10%);
+$modal-btn-cancel-color: #3fa1fd;
+$modal-btn-cancel-bg: mix(#3fa1fd, #fff, 10%);
