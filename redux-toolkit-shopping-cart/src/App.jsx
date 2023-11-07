@@ -10,8 +10,11 @@ import Modal from "./components/Modal";
 import NavBar from "./components/navbar/NavBar";
 
 const App = () => {
-  // Obtiene los datos del store
+  // Obtiene los datos del store del cart
   const { cartItems } = useSelector((store) => store.cart);
+  // Obtiene los datos del store del modal
+  const { isOpen } = useSelector((store) => store.modal);
+  // Ejecuta un action para modificar el state
   const dispatch = useDispatch();
 
   // useEffect se ejecuta cada vez que cambia cartItems
@@ -21,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      <Modal />
+      {isOpen && <Modal />}
       <NavBar />
       <CartContainer />
     </>
