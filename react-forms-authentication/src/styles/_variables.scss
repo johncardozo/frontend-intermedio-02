@@ -1,0 +1,29 @@
+// Fonts
+$font-family: "Raleway", sans-serif;
+
+// Colors
+$white: #fff;
+$gray: #525252;
+$error: #d14167;
+
+// Background
+$container-bg: linear-gradient(
+  to right bottom,
+  #d14167,
+  #d84668,
+  #de4c69,
+  #e55169,
+  #eb576a
+);
+$main-bg: linear-gradient(
+  to left top,
+  #d14167,
+  #d84668,
+  #de4c69,
+  #e55169,
+  #eb576a
+);
+
+// Shadows
+$main-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+  rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
