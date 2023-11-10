@@ -5,7 +5,7 @@ import SignUp from "./components/SignUp";
 import ForgotPassword from "./components/ForgotPassword";
 
 const App = () => {
-  const [step, setStep] = useState("signup");
+  const [step, setStep] = useState("forgot");
 
   return (
     <div className="container">
