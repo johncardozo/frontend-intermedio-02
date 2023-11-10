@@ -1,7 +1,7 @@
 const SignIn = () => {
   return (
     <main>
-      <h3>Sign In</h3>
+      <h3>Hello, friend!</h3>
       <div className="card">
         <form autoComplete="off">
           <fieldset>
