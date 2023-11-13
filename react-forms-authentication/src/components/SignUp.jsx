@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 const SignUp = () => {
+  let { setStep } = useContext(AuthContext);
   return (
     <main>
       <h3>Welcome, Join us!</h3>
@@ -44,7 +48,8 @@ const SignUp = () => {
         </form>
       </div>
       <p>
-        Already have an account? <span>Sign in</span>
+        Already have an account?{" "}
+        <span onClick={() => setStep("signin")}>Sign in</span>
       </p>
     </main>
   );

@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import AuthContext from "../context/AuthContext";
+
 const ForgotPassword = () => {
+  let { setStep } = useContext(AuthContext);
+
   return (
     <main>
       <h3>Forgot password?</h3>
@@ -13,7 +18,8 @@ const ForgotPassword = () => {
         </form>
       </div>
       <p>
-        Already have an account? <span>Sign in</span>
+        Already have an account?{" "}
+        <span onClick={() => setStep("signin")}>Sign in</span>
       </p>
     </main>
   );
