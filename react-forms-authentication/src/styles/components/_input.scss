@@ -12,6 +12,14 @@
     outline: none;
     padding: 0.2rem 0;
     color: v.$gray;
+
+    &:invalid[data-focused="true"] {
+      border-bottom: 1px solid v.$error;
+      color: v.$error;
+    }
+    &:invalid[data-focused="true"] ~ p {
+      display: block;
+    }
   }
   input[type="checkbox"] {
     margin-right: 8px;
