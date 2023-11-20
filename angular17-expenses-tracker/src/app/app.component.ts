@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 
 import { BalanceComponent } from './components/balance/balance.component';
 
+import { Balance } from './models/balance.model';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,4 +13,10 @@ import { BalanceComponent } from './components/balance/balance.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  balance: Balance = {
+    amount: 55_000,
+    income: 100_000,
+    expenses: 45_000,
+  };
+}

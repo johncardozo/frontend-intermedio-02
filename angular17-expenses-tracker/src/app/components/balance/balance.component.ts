@@ -12,10 +12,6 @@ import { Balance } from '../../models/balance.model';
   styleUrl: './balance.component.scss',
 })
 export class BalanceComponent {
-  @Input() title: string = 'Titulo';
-  balance: Balance = {
-    amount: 55_000,
-    income: 100_000,
-    expenses: 45_000,
-  };
+  @Input() title!: string;
+  @Input() balance!: Balance;
 }
