@@ -1,0 +1,62 @@
+@use "../../../styles.scss" as s;
+
+.balance {
+  background-image: linear-gradient(
+    to right bottom,
+    #39a9e4,
+    #3ba4f2,
+    #539cfc,
+    #7592ff,
+    #9a84ff,
+    #c079f3,
+    #e06ce2,
+    #f960cd,
+    #ff65af,
+    #ff7296,
+    #ff8384,
+    #f8937a
+  );
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 1.25rem;
+  padding: 1.5625rem;
+  color: s.$white;
+  font-family: s.$font-family;
+
+  &__header {
+    margin-bottom: 0.9375rem;
+    h4 {
+      font-weight: 200;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+}
+
+.no-balance__error {
+  font-family: s.$font-family;
+  font-weight: 500;
+  text-align: center;
+  color: s.$error;
+  background-color: s.$error-light;
+  border: 1px solid s.$error;
+  border-radius: 0.625rem;
+  padding: 0.9375rem;
+}
