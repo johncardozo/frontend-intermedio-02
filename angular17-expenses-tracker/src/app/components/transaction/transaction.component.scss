@@ -45,4 +45,11 @@
       background-color: s.$expense-icon-bg-color;
     }
   }
+  &__remove {
+    color: s.$remove;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 0.3125rem;
+  }
 }

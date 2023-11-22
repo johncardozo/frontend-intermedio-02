@@ -5,7 +5,12 @@
     } @case ("expense") {
     <div class="transaction__icon transaction__icon-expense">↓</div>
     } }
-    <h5>{{ transaction.category }}</h5>
+    <h5>
+      {{ transaction.category }}
+      <span class="material-symbols-outlined transaction__remove">
+        delete
+      </span>
+    </h5>
   </div>
   <div>
     <h5 class="transaction__amount">
