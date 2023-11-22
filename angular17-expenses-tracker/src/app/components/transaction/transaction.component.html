@@ -1,1 +1,11 @@
-<p>{{ transaction.category }}</p>
+<div class="transaction">
+  <div class="transaction__title">
+    <h5>{{ transaction.category }}</h5>
+  </div>
+  <div>
+    <h5 class="transaction__amount">
+      {{ transaction.amount | currency }}
+    </h5>
+    <h5 class="transaction__date">{{ transaction.date | date }}</h5>
+  </div>
+</div>

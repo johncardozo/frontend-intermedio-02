@@ -1,8 +1,11 @@
+@use "../styles" as s;
+
 .container {
-  background: #efefef;
+  background: s.$main-bg-color;
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-rows: 150px auto;
   padding: 1.25rem;
+  gap: 1.25rem;
 }

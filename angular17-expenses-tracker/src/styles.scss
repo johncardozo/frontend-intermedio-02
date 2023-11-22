@@ -11,6 +11,14 @@
 $font-family: "Montserrat", sans-serif;
 
 // Colors
+$main-bg-color: #d2d2d2;
 $white: #fff;
 $error: #f960cd;
 $error-light: mix($error, #fff, 20%);
+
+// Shadows
+$main-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+// Borders
+$main-border-radius: 0.9375rem;

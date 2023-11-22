@@ -1,0 +1,31 @@
+@use "../../../styles" as s;
+
+.transaction {
+  background-color: s.$white;
+  border-radius: s.$main-border-radius;
+  font-family: s.$font-family;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: s.$main-shadow;
+
+  &__title {
+    h5 {
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: #474747;
+    }
+  }
+  &__amount {
+    color: #474747;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+  }
+  &__date {
+    color: #5f5f5f;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+}
