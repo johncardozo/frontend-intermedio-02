@@ -1,5 +1,10 @@
 <div class="transaction">
   <div class="transaction__title">
+    @switch(transaction.type) { @case("income") {
+    <div class="transaction__icon transaction__icon-income">↑</div>
+    } @case ("expense") {
+    <div class="transaction__icon transaction__icon-expense">↓</div>
+    } }
     <h5>{{ transaction.category }}</h5>
   </div>
   <div>
