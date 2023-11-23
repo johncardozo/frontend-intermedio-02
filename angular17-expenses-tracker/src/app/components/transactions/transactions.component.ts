@@ -16,4 +16,8 @@ import { TransactionComponent } from '../transaction/transaction.component';
 })
 export class TransactionsComponent {
   @Input() transactions!: Transaction[];
+
+  removeTransaction(id: string) {
+    console.log(`Removing transaction ${id}`);
+  }
 }
