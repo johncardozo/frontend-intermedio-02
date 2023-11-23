@@ -52,4 +52,10 @@
     cursor: pointer;
     margin-left: 0.3125rem;
   }
+  &__amount-expense {
+    color: s.$amount-expense-color;
+  }
+  &__amount-income {
+    color: s.$amount-income-color;
+  }
 }
