@@ -15,4 +15,21 @@
     border-radius: 0.625rem;
     padding: 0.9375rem;
   }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    h3 {
+      font-family: s.$font-family;
+      color: s.$gray;
+      font-weight: 600;
+    }
+    a {
+      font-family: s.$font-family;
+      text-decoration: none;
+      color: s.$link-color;
+    }
+  }
 }
