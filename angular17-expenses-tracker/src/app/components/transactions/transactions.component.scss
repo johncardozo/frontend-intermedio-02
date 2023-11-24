@@ -1,5 +1,18 @@
+@use "../../../styles.scss" as s;
+
 .transactions {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+
+  &__empty {
+    font-family: s.$font-family;
+    font-weight: 400;
+    text-align: center;
+    color: s.$error;
+    background-color: s.$error-light;
+    border: 1px solid s.$error;
+    border-radius: 0.625rem;
+    padding: 0.9375rem;
+  }
 }

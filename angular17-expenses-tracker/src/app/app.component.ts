@@ -58,4 +58,11 @@ export class AppComponent {
       date: new Date(2023, 11, 4),
     },
   ];
+
+  removeTransaction(id: string) {
+    // Elimina la transacción del arreglo
+    this.transactions = this.transactions.filter(
+      (transaction) => transaction.id !== id
+    );
+  }
 }
