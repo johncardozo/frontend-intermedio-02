@@ -1,20 +1,43 @@
 <div class="add-transaction">
   <h2>Add transaction</h2>
-  <form class="add-transaction__form" autocomplete="off">
-    <input type="text" id="amount" class="add-transaction__amount" autofocus />
+  <form
+    class="add-transaction__form"
+    autocomplete="off"
+    [formGroup]="addTransactionForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <input
+      type="text"
+      class="add-transaction__amount"
+      autofocus
+      formControlName="amount"
+    />
     <div class="add-transaction__type">
-      <input type="radio" id="expense" name="type" value="expense" checked />
+      <input
+        type="radio"
+        id="expense"
+        name="type"
+        value="expense"
+        formControlName="type"
+      />
       <label for="expense">Expense</label>
-      <input type="radio" id="income" name="type" value="income" />
+      <input
+        type="radio"
+        id="income"
+        name="type"
+        value="income"
+        formControlName="type"
+      />
       <label for="income">Income</label>
     </div>
-    <select name="category" id="category" class="add-transaction__category">
+    <select class="add-transaction__category" formControlName="category">
+      <option value="">Select your category</option>
       <option value="food">Food</option>
       <option value="shopping">Shopping</option>
       <option value="entertainment">Entertainment</option>
       <option value="payroll">Payroll</option>
     </select>
-    <input type="date" id="date" class="add-transaction__date" />
+    <input type="date" class="add-transaction__date" formControlName="date" />
     <button type="submit">Save</button>
   </form>
   <a routerLink="/">Cancel</a>
