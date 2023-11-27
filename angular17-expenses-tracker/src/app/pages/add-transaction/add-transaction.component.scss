@@ -1,0 +1,103 @@
+@use "../../../styles" as s;
+
+.add-transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 3.125rem;
+
+  h2 {
+    font-family: s.$font-family;
+    font-weight: 500;
+    text-align: center;
+    color: s.$gray;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  &__amount {
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    padding: 0.3rem 2rem;
+    width: 20rem;
+    font-family: s.$font-family;
+    font-size: 3rem;
+    font-weight: 300;
+    color: s.$link-color;
+  }
+
+  &__type {
+    display: flex;
+    label {
+      font-family: s.$font-family;
+      font-size: 1.2rem;
+      margin-left: 0.4rem;
+      margin-right: 1.5rem;
+      color: s.$gray;
+    }
+
+    input[type="radio"] {
+      // Reset appearance
+      appearance: none;
+      // Normal state
+      background-color: s.$white;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 1px solid s.$link-color;
+      border-radius: 50%;
+      transform: translateY(0.2rem);
+      // Display check mark
+      display: grid;
+      place-content: center;
+      &::before {
+        content: "";
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        transform: scale(0);
+        box-shadow: inset 1rem 1rem s.$link-color;
+      }
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__category,
+  &__date {
+    border: none;
+    outline: none;
+    border-radius: 1.25rem;
+    padding: 0.5rem 1rem;
+    font-family: s.$font-family;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: s.$gray;
+  }
+
+  button {
+    border: none;
+    outline: none;
+    font-family: s.$font-family;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.8rem 1.8rem;
+    border-radius: 1.25rem;
+    background-image: s.$gradient-bg;
+    color: s.$white;
+    cursor: pointer;
+  }
+
+  a {
+    font-family: s.$font-family;
+    text-decoration: none;
+    color: s.$link-color;
+  }
+}

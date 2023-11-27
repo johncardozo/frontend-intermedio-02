@@ -27,6 +27,22 @@ $expense-icon-bg-color: #ffdcfa;
 $amount-expense-color: $expense-icon-color;
 $amount-income-color: $income-icon-color;
 
+$gradient-bg: linear-gradient(
+  to right bottom,
+  #39a9e4,
+  #3ba4f2,
+  #539cfc,
+  #7592ff,
+  #9a84ff,
+  #c079f3,
+  #e06ce2,
+  #f960cd,
+  #ff65af,
+  #ff7296,
+  #ff8384,
+  #f8937a
+);
+
 // Shadows
 $main-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
   rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
