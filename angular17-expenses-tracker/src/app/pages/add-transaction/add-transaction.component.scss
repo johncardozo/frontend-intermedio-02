@@ -101,6 +101,10 @@
     color: s.$link-color;
   }
 
+  input.ng-invalid.ng-touched {
+    border: 1px solid s.$error;
+  }
+
   &__error-message {
     font-family: s.$font-family;
     font-style: italic;
