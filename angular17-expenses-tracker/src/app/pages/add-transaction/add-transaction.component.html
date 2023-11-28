@@ -7,7 +7,7 @@
     (ngSubmit)="onSubmit()"
   >
     <input
-      type="text"
+      type="number"
       class="add-transaction__amount"
       autofocus
       formControlName="amount"
@@ -41,12 +41,18 @@
       <label for="income">Income</label>
     </div>
     <select class="add-transaction__category" formControlName="category">
-      <option value="">Select your category</option>
+      <option value="">Select the category</option>
       <option value="food">Food</option>
       <option value="shopping">Shopping</option>
       <option value="entertainment">Entertainment</option>
       <option value="payroll">Payroll</option>
     </select>
+    <!-- prettier-ignore -->
+    @if(addTransactionForm.get("category")?.invalid && addTransactionForm.get("category")?.touched ) {
+    <!-- prettier-ignore -->
+    @if(addTransactionForm.get("category")?.errors?.["required"]) {
+    <div class="add-transaction__error-message">Select your category</div>
+    } }
     <input type="date" class="add-transaction__date" formControlName="date" />
     <button type="submit">Save</button>
   </form>

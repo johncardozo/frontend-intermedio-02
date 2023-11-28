@@ -30,13 +30,26 @@ export class AddTransactionComponent implements OnInit {
         Validators.pattern('^[0-9]+$'),
       ]),
       type: new FormControl('expense', Validators.required),
-      category: new FormControl('', Validators.required),
-      date: new FormControl('', Validators.required),
+      category: new FormControl('food', Validators.required),
+      date: new FormControl('2023-11-28', Validators.required),
     });
   }
 
   onSubmit() {
+    // Verifica si el formulario es válido
+    if (this.addTransactionForm.valid) {
+      console.log('Formulario válido');
+    } else {
+      console.error('Formulario no válido');
+    }
+
+    // const data = {
+    //   ...this.addTransactionForm.value,
+    //   amount: parseInt(this.addTransactionForm.controls['amount'].value),
+    // };
+
     console.log(this.addTransactionForm);
     console.log(this.addTransactionForm.value);
+    //console.log(data);
   }
 }

@@ -101,7 +101,8 @@
     color: s.$link-color;
   }
 
-  input.ng-invalid.ng-touched {
+  input.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched {
     border: 1px solid s.$error;
   }
 
@@ -110,5 +111,17 @@
     font-style: italic;
     font-size: 0.8rem;
     color: s.$remove;
+  }
+
+  // Chrome, Edge, Brave, Opera, Safari
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  // Firefox
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
 }
