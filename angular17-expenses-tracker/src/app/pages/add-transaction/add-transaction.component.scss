@@ -100,4 +100,11 @@
     text-decoration: none;
     color: s.$link-color;
   }
+
+  &__error-message {
+    font-family: s.$font-family;
+    font-style: italic;
+    font-size: 0.8rem;
+    color: s.$remove;
+  }
 }

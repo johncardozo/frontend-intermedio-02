@@ -3,7 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 // Formularios
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormGroup,
+  FormControl,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-add-transaction',
@@ -20,14 +25,18 @@ export class AddTransactionComponent implements OnInit {
   ngOnInit(): void {
     // Inicialización del formulario
     this.addTransactionForm = new FormGroup({
-      amount: new FormControl(0),
-      type: new FormControl('expense'),
-      category: new FormControl(''),
-      date: new FormControl(''),
+      amount: new FormControl(0, [
+        Validators.required,
+        Validators.pattern('^[0-9]+$'),
+      ]),
+      type: new FormControl('expense', Validators.required),
+      category: new FormControl('', Validators.required),
+      date: new FormControl('', Validators.required),
     });
   }
 
   onSubmit() {
+    console.log(this.addTransactionForm);
     console.log(this.addTransactionForm.value);
   }
 }
