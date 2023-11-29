@@ -17,4 +17,11 @@ export class TransactionsService {
       'http://localhost:3000/transactions'
     );
   }
+
+  public create(transaction: Transaction): Observable<Transaction> {
+    return this.httpClient.post<Transaction>(
+      'http://localhost:3000/transactions',
+      transaction
+    );
+  }
 }

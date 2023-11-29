@@ -34,13 +34,6 @@
   ],
   "transactions": [
     {
-      "id": "1",
-      "type": "expense",
-      "amount": 12,
-      "category": "food",
-      "date": "2023-11-20"
-    },
-    {
       "id": "2",
       "type": "expense",
       "amount": 280,
@@ -60,6 +53,20 @@
       "amount": 500,
       "category": "payroll",
       "date": "2023-11-28"
+    },
+    {
+      "amount": 200,
+      "type": "expense",
+      "category": "entertainment",
+      "date": "2023-11-29",
+      "id": "U-yraKw"
+    },
+    {
+      "amount": 100,
+      "type": "income",
+      "category": "payroll",
+      "date": "2023-11-29",
+      "id": "JvmQuBX"
     }
   ]
 }

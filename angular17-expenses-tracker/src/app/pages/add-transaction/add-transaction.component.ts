@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 // Formularios
 import {
@@ -9,6 +9,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+
+// Services
+import { TransactionsService } from '../../services/transactions.service';
+
+// Models
+import { Transaction } from '../../models/transaction.model';
 
 @Component({
   selector: 'app-add-transaction',
@@ -20,6 +26,11 @@ import {
 export class AddTransactionComponent implements OnInit {
   // Objeto que administra la información del formulario
   addTransactionForm!: FormGroup;
+
+  constructor(
+    private transactionsService: TransactionsService,
+    private router: Router
+  ) {}
 
   // Se ejecuta en el montaje del componente en el DOM Tree
   ngOnInit(): void {
@@ -38,18 +49,16 @@ export class AddTransactionComponent implements OnInit {
   onSubmit() {
     // Verifica si el formulario es válido
     if (this.addTransactionForm.valid) {
-      console.log('Formulario válido');
-    } else {
-      console.error('Formulario no válido');
+      // Obtiene el objeto del formulario con los datos de la transacción
+      const transaction = this.addTransactionForm.value;
+
+      // Accede al servicio del backend para crear una transacción
+      this.transactionsService
+        .create(transaction)
+        .subscribe((response: Transaction) => {
+          // Navega al home de la aplicación
+          this.router.navigate(['/']);
+        });
     }
-
-    // const data = {
-    //   ...this.addTransactionForm.value,
-    //   amount: parseInt(this.addTransactionForm.controls['amount'].value),
-    // };
-
-    console.log(this.addTransactionForm);
-    console.log(this.addTransactionForm.value);
-    //console.log(data);
   }
 }
