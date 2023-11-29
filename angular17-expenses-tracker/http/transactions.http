@@ -1,0 +1,2 @@
+### Get all transactions
+GET http://localhost:3000/transactions

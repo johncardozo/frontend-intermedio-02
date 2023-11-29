@@ -31,5 +31,35 @@
       "img": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg",
       "amount": 1
     }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "type": "expense",
+      "amount": 12,
+      "category": "food",
+      "date": "2023-11-20"
+    },
+    {
+      "id": "2",
+      "type": "expense",
+      "amount": 280,
+      "category": "shopping",
+      "date": "2023-11-26"
+    },
+    {
+      "id": "3",
+      "type": "expense",
+      "amount": 60,
+      "category": "entertainment",
+      "date": "2023-11-27"
+    },
+    {
+      "id": "4",
+      "type": "income",
+      "amount": 500,
+      "category": "payroll",
+      "date": "2023-11-28"
+    }
   ]
 }
