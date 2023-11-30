@@ -41,11 +41,18 @@
       "date": "2023-11-28"
     },
     {
-      "amount": 200,
+      "amount": 50,
+      "type": "expense",
+      "category": "food",
+      "date": "2023-12-01",
+      "id": "5nFUhxL"
+    },
+    {
+      "amount": 300,
       "type": "expense",
       "category": "entertainment",
       "date": "2023-11-29",
-      "id": "U-yraKw"
+      "id": "aKmZlCT"
     }
   ]
 }
