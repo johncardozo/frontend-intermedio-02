@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { TransactionsService } from './transactions.service';
 // Models
 import { Transaction } from '../models/transaction.model';
-import { ExpansionCase } from '@angular/compiler';
 
 describe('TransactionsService', () => {
   let service: TransactionsService;
